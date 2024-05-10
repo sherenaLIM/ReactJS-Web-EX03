@@ -73,14 +73,30 @@ function ManageCustomer() {
     // function to add new customer
     const addCustomer = async (customer) => {
         try {
-            const response = await fetch(`http://localhost:3001/customers`, 
+            const response = await fetch(`http://localhost:3001/customers`);
+            if (!response.ok) {
+                throw new Error ("Failed to fetch customer data");
+            }
+            const data = await response.json();
+            const highestId = Math.max(...data.map(customer => customer.id));
+            console.log(highestId);
+
+            // increment the highestId by 1
+            const newId = highestId + 1;
+            console.log(newId);
+
+            // assign the new id to the new customer
+            customer.id = newId;
+            console.log(customer.id);
+
+            // send POST request to add new customer
+            const addResponse = await fetch(`http://localhost:3001/customers`, 
             {   
-                // send POST request to add new customer
                 method: "POST",
                 headers: {"Content-Type" : "application/json",},
                 body: JSON.stringify(customer),
             }); 
-            if (!response.ok) {
+            if (!addResponse.ok) {
                 throw new Error("Failed to add new customer") // handle add customer error message
             }
             // alternatively, you handle the success response

@@ -50,6 +50,7 @@ function ListCustomers() {
     // navigate to edit customer page
     const handleEdit = async(id, customer) => {
         // implement edit logic here
+        navigate("/customers");
     };
 
     // handle delete functionality
