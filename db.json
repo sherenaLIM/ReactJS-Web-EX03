@@ -1,0 +1,32 @@
+{
+  "customers": [
+    {
+      "name": "John Doe",
+      "gender": "Male",
+      "address": "123 Clementi Ave 3 S(120431)",
+      "phone": "91234567",
+      "id": "1"
+    },
+    {
+      "name": "Jane Doe",
+      "gender": "Female",
+      "address": "456 Alexandra Road S(119962)",
+      "phone": "97654321",
+      "id": "2"
+    },
+    {
+      "id": "64b4",
+      "name": "hellokitty",
+      "gender": "Female",
+      "address": "jurassic park",
+      "phone": "991"
+    },
+    {
+      "id": "14b9",
+      "name": "chingis",
+      "gender": "Female",
+      "address": "rubbishchute",
+      "phone": "78654321"
+    }
+  ]
+}
