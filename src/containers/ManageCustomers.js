@@ -19,12 +19,12 @@ function ManageCustomer() {
     const [phone, setPhone] = useState('');
 
     // define the buttonLabel
-    const buttonLabel = id === 0 ? "Edit" : "Add";
+    const buttonLabel = id === "0" ? "Edit" : "Add";
 
     // integrate with API
     useEffect(() => {
         // fetch customer data if editing existing customer, id already exists
-        if (id !== "0") {
+        if (id === "0") {
             fetchCustomerData(id); // call fetchCustomerData function to fetch customer data using id
         }
     }, [id]); // useEffect hook with id as dependency
