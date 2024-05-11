@@ -13,6 +13,13 @@
       "gender": "Female",
       "address": "456 Alexandra Road S(119962)",
       "phone": "97654321"
+    },
+    {
+      "id": 3,
+      "name": "Sherena Lim",
+      "gender": "Female",
+      "address": "OUE Downtown Twin Peaks",
+      "phone": "91813228"
     }
   ]
 }
